@@ -17,10 +17,15 @@ Vue.use(uploader)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
 /* eslint-disable no-new */
-new Vue({
+window.app = new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })
